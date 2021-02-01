@@ -2,16 +2,26 @@
     <head>
     <script type="text/javascript" src="grab.js"></script>
     </head>
-    <body>
+    <body onload="readUrl();">
     <p>Hello world!</p>
-    <p><a href="javascript:readUrl();">Hello?</a></p>
-    <p id="known_person" hidden>
+    <div id="known_person" hidden>
          <div id="person_name">Hello </div>
-    </p>
+    </div>
 
     <p id="unknown_person" hidden>
         Who are you? <input type="text" name="who are you?">
     </p>
+
+         <form action="javascript:rsvp();">
+            <p>Can you come to my wedding?</p>
+            <input type="radio" name="rsvp" value="not_attending" checked> Not attending
+            <input type="radio" name="rsvp" value="attending_stag"> Just me
+            <input type="radio" name="rsvp" value="attending_plus1"> Plus 1
+            <p><input type="submit" value="Submit"></p>
+         </form>
+         <p id="result"></p>
+
+
     
     </body>
 </html>
