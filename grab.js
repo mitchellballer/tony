@@ -12,6 +12,15 @@ function readUrl(url){
         document.getElementById("known_person").hidden = false;
         document.getElementById("person_name").innerHTML += (params.get('id'));
         person = params.get('id');
+        if(person == "asdf"){
+            document.getElementById("asdf").hidden = false;
+        }else if(person == "asdf2"){
+            document.getElementById("asdf2").hidden = false;
+        }
+
+    } else if (params.has('results')){
+        document.getElementById("responses").hidden = false;
+        
     } else {
         document.getElementById("unknown_person").hidden = false;
         person = "unknown"
