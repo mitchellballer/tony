@@ -31,4 +31,11 @@ function readUrl(url){
 function rsvp(){
     result = document.querySelector('input[name="rsvp"]:checked').value;
     document.getElementById("result").innerHTML = person + " is: " + result;
+    if(person == "asdf"){
+        document.getElementById("asdf_response").innerHTML += result;
+    }else if(person == "asdf2"){
+        document.getElementById("asdf2_response").innerHTML += result;
+    }else{
+        document.getElementById("rando_response").innerHTML += result;
+    }
 }
