@@ -4,26 +4,25 @@ function readUrl(url){
     let url_str = document.URL;
 
     let url_args = new URL(url_str);
-    console.log(url_args.searchParams);
     let params = url_args.searchParams;
 
-    console.log(params.get('id'));
     if (params.has('id')){
         document.getElementById("known_person").hidden = false;
         document.getElementById("person_name").innerHTML += (params.get('id'));
         person = params.get('id');
-        if(person == "asdf"){
-            document.getElementById("asdf").hidden = false;
-        }else if(person == "asdf2"){
-            document.getElementById("asdf2").hidden = false;
+        if(person == "dave"){
+            document.getElementById("dave").hidden = false;
+        }else if(person == "george"){
+            document.getElementById("george").hidden = false;
         }
 
     } else if (params.has('results')){
         document.getElementById("responses").hidden = false;
         
     } else {
-        document.getElementById("unknown_person").hidden = false;
+        //document.getElementById("unknown_person").hidden = false;
         person = "unknown"
+        document.getElementById("no_params").hidden = false;
     }
     
 }
