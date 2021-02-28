@@ -8,7 +8,7 @@ function readUrl(url){
 
     if (params.has('id')){
         document.getElementById("known_person").hidden = false;
-        document.getElementById("person_name").innerHTML += (params.get('id'));
+        //document.getElementById("person_name").innerHTML += (params.get('id'));
         person = params.get('id');
         if(person == "dave"){
             document.getElementById("dave").hidden = false;
